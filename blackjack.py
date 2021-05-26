@@ -124,6 +124,9 @@ def run():
             if double_button.handle_event(event):
                 player.bet *= 2
                 player.draw(cards)
+                images.append(CardImg(screen, (len(images) * 160 + 100, settings.screen_height - 200), (150, 200), player.hand[-1]))
+                for img in images:
+                    img.blitme()
                 your_bet_label.blitme()
                 player.balance -= player.bet // 2
                 balance_label.update_text("Balance: " + str(player.balance))
