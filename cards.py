@@ -6,6 +6,7 @@ class Cards:
         shuffle(self.cards)
 
     def shuffle(self):
+        self.cards = list(range(52))
         shuffle(self.cards)
 
     def draw(self):
